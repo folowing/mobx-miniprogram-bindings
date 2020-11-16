@@ -2,7 +2,7 @@
     "name": "mobx-miniprogram-bindings",
     "version": "2.0.0",
     "description": "Mobx binding utils for WeChat miniprogram",
-    "main": "miniprogram_dist/index.js",
+    "main": "src/index.js",
     "scripts": {
         "dev": "gulp dev",
         "build": "gulp",
@@ -68,6 +68,9 @@
         "vinyl": "^2.2.0",
         "webpack": "^4.29.5",
         "webpack-node-externals": "^1.7.2"
+    },
+    "dependencies": {
+        "next-tick": "^1.1.0"
     },
     "peerDependencies": {
         "mobx-miniprogram": "^4.0.0"

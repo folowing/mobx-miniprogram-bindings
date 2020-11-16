@@ -1,4 +1,5 @@
 import {reaction, comparer, toJS} from 'mobx-miniprogram'
+import nextTick from 'next-tick'
 
 function _createActions(methods, options) {
   const {store, actions} = options
@@ -48,7 +49,7 @@ function _createDataFieldsReactions(target, options) {
   function scheduleSetData(field, value) {
     if (!pendingSetData) {
       pendingSetData = {}
-      wx.nextTick(applySetData)
+      nextTick(applySetData)
     }
     pendingSetData[field] = toJS(value)
   }
